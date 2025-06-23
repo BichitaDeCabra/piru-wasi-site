@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-primary: #375843;
+  --color-secondary: #5a7c65;
+  --color-accent: #7a9b87;
+  --color-neutral: #FAF6EA;
+  --color-dark: #375843;
+  --color-white: #FFFFFF;
+  --color-header: #A59973;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--color-dark);
+  overflow-x: hidden;
+  background-color: var(--color-neutral);
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(55, 88, 67, 0.1);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(250, 246, 234, 0.95);
+}
+
+.gradient-overlay {
+  background: linear-gradient(135deg, rgba(55, 88, 67, 0.8), rgba(90, 124, 101, 0.6));
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 120px;
+  z-index: 1000;
+}
